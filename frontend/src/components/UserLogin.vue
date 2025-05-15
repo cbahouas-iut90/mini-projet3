@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="login">
     <h1>Connexion</h1>
     <a :href="googleAuthUrl">
-      <button>Connexion avec Google</button>
+      <button>Se connecter avec Google</button>
     </a>
   </div>
 </template>
@@ -17,5 +17,10 @@ export default {
   }
 };
 </script>
+
 <style scoped>
+.login {
+  text-align: center;
+  margin-top: 100px;
+}
 </style>
