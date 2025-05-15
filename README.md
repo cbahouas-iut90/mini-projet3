@@ -25,3 +25,25 @@ Sessions : express-session + connect-redis + Redis
 - Interface de chat en temps réel avec stockage de l’historique
 
 - Affichage des messages par utilisateur connecté
+
+
+## Installer les dépendances
+```bash
+cd backend
+npm install
+
+cd frontend
+npm install
+```
+
+
+## Commande pour lancer le backend
+```bash
+node server.js
+```
+## Commande pour lancer le frontend
+```bash
+npm run serve
+```
+
+
