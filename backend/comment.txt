@@ -1,0 +1,22 @@
+npm init -y
+
+npm install express mongoose passport passport-google-oauth20 passport-github2 express-session connect-redis ioredis dotenv cookie-parser
+npm install socket.io
+npm install --save-dev nodemon
+
+Modifier package.json:
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+mkdir config models routes controllers
+touch .env
+touch config/passport.js config/redisClient.js
+touch models/user.js
+touch routes/auth.js
+touch controllers/authController.js
+touch server.js
+touch models/Message.js
+touch controllers/messagecontroller.js
+touch routes/messages.js
