@@ -43,7 +43,7 @@ npm install
 
 ```
 PORT=3000
-MONGO_URI=mongodb://localhost:27017/nom-bdd
+MONGO_URI=mongodb://127.0.0.1:27017:27017/nom-bdd
 SESSION_SECRET=votre-cle-secret
 GOOGLE_CLIENT_ID=votre-client-id
 GOOGLE_CLIENT_SECRET=votre-secret
