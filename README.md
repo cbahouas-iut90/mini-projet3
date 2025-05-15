@@ -28,10 +28,13 @@ Sessions : express-session + connect-redis + Redis
 
 
 ## Installer les dépendances
+### backend
 ```bash
 cd backend
 npm install
-
+```
+### frontend
+```bash
 cd frontend
 npm install
 ```
