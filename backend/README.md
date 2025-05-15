@@ -16,6 +16,7 @@ Ce backend fait partie du mini-projet 3. Il gère l’authentification OAuth2 vi
 
 ## 📁 Structure du projet
 
+```
 mkdir config models routes controllers
 touch .env
 touch config/passport.js config/redisClient.js
@@ -26,9 +27,7 @@ touch server.js
 touch models/Message.js
 touch controllers/messagecontroller.js
 touch routes/messages.js
-
----
-
+```
 
 ##  Démarrer le projet
 
