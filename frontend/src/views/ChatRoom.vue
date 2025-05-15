@@ -1,11 +1,16 @@
-<script setup>
-
-</script>
-
 <template>
-
+  <div class="chatroom">
+    <Chat />
+  </div>
 </template>
 
-<style scoped>
+<script>
+import ChatBox from '@/components/ChatBox.vue';
 
-</style>
+export default {
+  name: 'ChatRoom',
+  components: {
+    Chat: ChatBox
+  }
+};
+</script>

@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: 'LoginView',
+  name: 'UserLogin',
   computed: {
     googleAuthUrl() {
       return 'http://localhost:3000/auth/google';

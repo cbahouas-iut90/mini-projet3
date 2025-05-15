@@ -1,11 +1,16 @@
-<script setup>
-
-</script>
-
 <template>
-  $END$
+  <div class="home">
+    <Login />
+  </div>
 </template>
 
-<style scoped>
+<script>
+import UserLogin from '@/components/UserLogin.vue';
 
-</style>
+export default {
+  name: 'HomeView',
+  components: {
+    Login: UserLogin
+  }
+};
+</script>
