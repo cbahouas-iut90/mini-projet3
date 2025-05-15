@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const express = require('express');
 const session = require('express-session');
 const passport = require('passport');
@@ -46,6 +47,10 @@ passport.serializeUser((user, done) => {
   done(null, user.id);
 });
 passport.deserializeUser(async (id, done) => {
+  // Récupérer l'utilisateur depuis MongoDB selon l'id
+  // Exemple :
+  // const user = await User.findById(id);
+  // done(null, user);
   done(null, { id }); // Stub simple
 });
 
@@ -56,6 +61,8 @@ passport.use(new GoogleStrategy({
   callbackURL: '/auth/google/callback'
 },
 async (accessToken, refreshToken, profile, done) => {
+  // Trouver ou créer l'utilisateur en DB
+  // Exemple simple stub
   return done(null, profile);
 }
 ));
@@ -68,7 +75,7 @@ app.get('/auth/google',
 app.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/' }),
   (req, res) => {
-    res.redirect('/chat'); 
+    res.redirect('/chat'); // ou autre page après connexion
   }
 );
 
@@ -78,8 +85,9 @@ app.get('/chat', (req, res) => {
   res.send('Bienvenue dans le chat');
 });
 
-// Socket.io
+// Socket.io (simple exemple)
 io.use((socket, next) => {
+  // Ici tu peux gérer auth session avec socket.request
   next();
 });
 
@@ -87,7 +95,7 @@ io.on('connection', (socket) => {
   console.log('Nouvel utilisateur connecté', socket.id);
 
   socket.on('chat message', (msg) => {
-    io.emit('chat message', msg); 
+    io.emit('chat message', msg); // broadcast message à tous les connectés
   });
 
   socket.on('disconnect', () => {
