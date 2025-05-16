@@ -44,7 +44,18 @@ cd backend
 npm install
 ```
 
-### 2. Lancer le backend
+### 2. Créer un fichier .env
+
+```
+PORT=3000
+MONGO_URI=mongodb://127.0.0.1:27017:27017/nom-bdd
+SESSION_SECRET=votre-cle-secret
+GOOGLE_CLIENT_ID=votre-client-id
+GOOGLE_CLIENT_SECRET=votre-secret
+GOOGLE_CALLBACK_URL=http://localhost:3000/auth/google/callback
+```
+
+### 3. Lancer le backend
 
 ```
 node server.js
